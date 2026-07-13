@@ -1,0 +1,347 @@
+{
+  "schema": 2,
+  "rev": 1,
+  "generated": "2026-07-10T10:07:12Z",
+  "minAppVersion": "0.1.0",
+  "components": {
+    "php": {
+      "kind": "runtime",
+      "arch": {
+        "arm64": "aarch64",
+        "x86_64": "x86_64"
+      },
+      "files": {
+        "cli": {
+          "url": "https://dl.static-php.dev/static-php-cli/bulk/php-{v}-cli-macos-{arch}.tar.gz",
+          "into": "bin",
+          "exec": {
+            "php": "bin/php"
+          }
+        },
+        "fpm": {
+          "url": "https://dl.static-php.dev/static-php-cli/bulk/php-{v}-fpm-macos-{arch}.tar.gz",
+          "into": "sbin",
+          "exec": {
+            "php-fpm": "sbin/php-fpm"
+          }
+        }
+      },
+      "lines": {
+        "8.4": {
+          "eol": "2028-12-31"
+        },
+        "8.3": {
+          "eol": "2027-12-31"
+        },
+        "8.2": {
+          "eol": "2026-12-31"
+        },
+        "8.1": {
+          "eol": "2025-12-31"
+        },
+        "8.0": {
+          "eol": "2023-11-26"
+        }
+      },
+      "versions": {
+        "8.4.16": {
+          "sha": {}
+        },
+        "8.3.32": {
+          "sha": {}
+        },
+        "8.2.32": {
+          "sha": {}
+        },
+        "8.1.34": {
+          "sha": {}
+        },
+        "8.0.30": {
+          "sha": {}
+        }
+      }
+    },
+    "node": {
+      "kind": "runtime",
+      "arch": {
+        "arm64": "arm64",
+        "x86_64": "x64"
+      },
+      "files": {
+        "dist": {
+          "url": "https://nodejs.org/dist/v{v}/node-v{v}-darwin-{arch}.tar.gz",
+          "strip": 1,
+          "sums": "https://nodejs.org/dist/v{v}/SHASUMS256.txt",
+          "exec": {
+            "node": "bin/node",
+            "npm": "bin/npm",
+            "npx": "bin/npx"
+          }
+        }
+      },
+      "lines": {
+        "26": {},
+        "24": {
+          "lts": true
+        },
+        "22": {
+          "lts": true
+        },
+        "20": {
+          "lts": true
+        }
+      },
+      "versions": {
+        "26.5.0": {
+          "sha": {
+            "dist:arm64": "ee920559aaa2391569cff4d737e3b83963430e3a14dedd91bfe0ff53171b5af9",
+            "dist:x86_64": "98293394c945a24e64e00b4177bf075ec963ea70b34d1d2e24bd4a71716d334f"
+          }
+        },
+        "25.9.0": {
+          "sha": {
+            "dist:arm64": "e479f3c469d3d9303a44f00a8ea37a3788395d171bb8059c48a4bbbd2e371b59",
+            "dist:x86_64": "7d737b53ce191142bfa1c17cfa5b070d96e84eebf76b8dd06d84981cbdc3f7e3"
+          }
+        },
+        "24.18.0": {
+          "sha": {
+            "dist:arm64": "e1a97e14c99c803e96c7339403282ea05a499c32f8d83defe9ef5ec66f979ed1",
+            "dist:x86_64": "dfd0dbd3e721503434df7b7205e719f61b3a3a31b2bcf9729b8b91fea240f080"
+          }
+        },
+        "23.11.1": {
+          "sha": {
+            "dist:arm64": "255509d2c4fe8e1d6fefb950ad8db285ed75ba543e18744d83dc139f978e404d",
+            "dist:x86_64": "7e384a0cfa8b44ee4833b3823485baad78bf258e54f47020d2d2b4b75e9275d3"
+          }
+        },
+        "22.23.1": {
+          "sha": {
+            "dist:arm64": "ef28d8fab2c0e4314522d4bb1b7173270aa3937e93b92cb7de79c112ac1fa953",
+            "dist:x86_64": "b8da981b8a0b1241b70249204916da76c63573ddf5814dbd2d1e41069105cb81"
+          }
+        },
+        "21.7.3": {
+          "sha": {
+            "dist:arm64": "165d3ba3500cfc8708f85d3815aaaa21ce418164c933d5419c30825ccad3a99c",
+            "dist:x86_64": "58d0212e169764c3424d2d5bec73e8a098d34b4e82fca6e1dd54083ea3049c5f"
+          }
+        },
+        "20.20.2": {
+          "sha": {
+            "dist:arm64": "466e05f3477c20dfb723054dfebffe55bc74660ee77f612166fca121dacb65b6",
+            "dist:x86_64": "8be6f5e4bb128c82774f8a0b8d7a1cc1365a7977d9657cece0ca647b3fe04e61"
+          }
+        },
+        "19.9.0": {
+          "sha": {
+            "dist:arm64": "13f7f0e57a2123e55a3172b65e08bc2a51fb52bf366a83d7dda12456ebdc3da0",
+            "dist:x86_64": "4f1a5b72ef0bcb6757e5daaf3fcf2c26fa35dc5d5fdff7692b63775ed51934a4"
+          }
+        },
+        "18.20.8": {
+          "sha": {
+            "dist:arm64": "bae4965d29d29bd32f96364eefbe3bca576a03e917ddbb70b9330d75f2cacd76",
+            "dist:x86_64": "ed2554677188f4afc0d050ecd8bd56effb2572d6518f8da6d40321ede6698509"
+          }
+        },
+        "17.9.1": {
+          "sha": {
+            "dist:arm64": "d6add5bbe10203a76d9ed964a2e5075a45aaf76137dbf3ee772fe6a679a34f36",
+            "dist:x86_64": "ef8ef450425db95a1e91c1dd4bc6d05ca40bbbbdab9a71f59c5a02e13cc039fb"
+          }
+        }
+      }
+    },
+    "mysql": {
+      "kind": "service",
+      "arch": {
+        "arm64": "arm64",
+        "x86_64": "x86_64"
+      },
+      "files": {
+        "dist": {
+          "url": "https://dev.mysql.com/get/Downloads/MySQL-{major}/mysql-{v}-{os}-{arch}.tar.gz",
+          "strip": 1,
+          "exec": {
+            "mysqld": "bin/mysqld",
+            "mysql": "bin/mysql",
+            "mysqladmin": "bin/mysqladmin",
+            "mysqldump": "bin/mysqldump"
+          }
+        }
+      },
+      "versions": {
+        "9.1.0": {
+          "sha": {
+            "dist:arm64": "ecf95d05977dae03626e54d44a9139ac2cd5259e2e7e55c6f1cff002a6de15f2",
+            "dist:x86_64": "5116fd0178ebbd15ae379a803a798820f296b837a33fcf2e3f6c2da9071f6415"
+          },
+          "vars": {
+            "os": "macos14"
+          }
+        },
+        "8.4.3": {
+          "sha": {
+            "dist:arm64": "af1af43030ac66b73dc2d5dcf645a61cdf9e7cf5404cf04bdf8e194447b0f153",
+            "dist:x86_64": "b690dfaad2108889390d40df388c16453e345f69a77784444687e8e308855af6"
+          },
+          "vars": {
+            "os": "macos14"
+          }
+        },
+        "8.0.40": {
+          "sha": {
+            "dist:arm64": "a0b8449c19ef59ca688c93ffd89d42f5d78abe6cc136c0d754c6ccb3b202fb9a",
+            "dist:x86_64": "a416ee86e72f22089c41911bfee08be0d4dab3b816923be7b465f65df555b36d"
+          },
+          "vars": {
+            "os": "macos14"
+          }
+        }
+      }
+    },
+    "postgresql": {
+      "kind": "service",
+      "arch": {
+        "arm64": "aarch64",
+        "x86_64": "x86_64"
+      },
+      "files": {
+        "dist": {
+          "url": "https://github.com/theseus-rs/postgresql-binaries/releases/download/{v}/postgresql-{v}-{arch}-apple-darwin.tar.gz",
+          "strip": 1,
+          "exec": {
+            "postgres": "bin/postgres",
+            "initdb": "bin/initdb",
+            "pg_isready": "bin/pg_isready",
+            "psql": "bin/psql",
+            "pg_dump": "bin/pg_dump"
+          }
+        }
+      },
+      "versions": {
+        "18.4.0": {
+          "sha": {}
+        },
+        "17.6.0": {
+          "sha": {}
+        }
+      }
+    },
+    "composer": {
+      "kind": "tool",
+      "arch": null,
+      "requires": {
+        "php": ">=7.2.5"
+      },
+      "files": {
+        "dist": {
+          "url": "https://getcomposer.org/download/{v}/composer.phar",
+          "sums": "https://getcomposer.org/download/{v}/composer.phar.sha256sum",
+          "exec": {
+            "composer": "composer.phar"
+          }
+        }
+      },
+      "versions": {
+        "2.8.4": {
+          "sha": {
+            "dist:noarch": "c4c4e2e1beab0ea04e0bd042a5dbba9feda1fbf5eda0d36203958edd343c0a8a"
+          }
+        }
+      }
+    },
+    "phpmyadmin": {
+      "kind": "app",
+      "arch": null,
+      "requires": {
+        "php": ">=8.2"
+      },
+      "files": {
+        "dist": {
+          "url": "https://files.phpmyadmin.net/phpMyAdmin/{v}/phpMyAdmin-{v}-all-languages.zip",
+          "sums": "https://files.phpmyadmin.net/phpMyAdmin/{v}/phpMyAdmin-{v}-all-languages.zip.sha256",
+          "strip": 1,
+          "docroot": "."
+        }
+      },
+      "versions": {
+        "5.2.2": {
+          "sha": {
+            "dist:noarch": "6b99534f72ffb1d7275f50d23ca4141e1495c97d7cadb73a41d6dc580ed5ce29"
+          }
+        }
+      }
+    },
+    "adminer": {
+      "kind": "app",
+      "arch": null,
+      "requires": {
+        "php": ">=8.1"
+      },
+      "files": {
+        "dist": {
+          "url": "https://github.com/vrana/adminer/releases/download/v{v}/adminer-{v}.php",
+          "into": "adminer",
+          "docroot": "adminer"
+        }
+      },
+      "versions": {
+        "4.8.1": {
+          "sha": {
+            "dist:noarch": "2fd7e6d8f987b243ab1839249551f62adce19704c47d3d0c8dd9e57ea5b9c6b3"
+          }
+        }
+      }
+    },
+    "wp-cli": {
+      "kind": "tool",
+      "arch": null,
+      "requires": {
+        "php": ">=5.6"
+      },
+      "files": {
+        "dist": {
+          "url": "https://github.com/wp-cli/wp-cli/releases/download/v{v}/wp-cli-{v}.phar",
+          "exec": {
+            "wp": "wp-cli.phar"
+          }
+        }
+      },
+      "versions": {
+        "2.11.0": {
+          "sha": {
+            "dist:noarch": ""
+          }
+        }
+      }
+    }
+  },
+  "templates": {
+    "wordpress": {
+      "files": {
+        "dist": {
+          "url": "https://wordpress.org/wordpress-{v}.zip",
+          "strip": 1,
+          "docroot": "."
+        }
+      },
+      "versions": {
+        "6.8.1": {
+          "sha": {
+            "dist:noarch": ""
+          },
+          "minPhp": "7.4"
+        },
+        "6.7.2": {
+          "sha": {
+            "dist:noarch": ""
+          },
+          "minPhp": "7.4"
+        }
+      }
+    }
+  }
+}
