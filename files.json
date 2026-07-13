@@ -1,7 +1,8 @@
 {
+  "_note": "Schema 2 published manifest. RULES: (1) every file needs a 'sums' sidecar URL or a real pinned sha per version — ManifestSchema2 drops anything unverifiable, silently, whole; (2) PHP must point at static-php-cli BULK builds (common lacks mysqli — WordPress breaks; the install gate in RuntimeManager refuses such builds anyway); (3) only non-EOL lines are offered — legacy installs keep working from disk, they just aren't offered for new installs. Regenerate BundledManifest.swift with tools/emit-bundled.py after editing.",
   "schema": 2,
-  "rev": 1,
-  "generated": "2026-07-10T10:07:12Z",
+  "rev": 2,
+  "generated": "2026-07-14T00:00:00Z",
   "minAppVersion": "0.1.0",
   "components": {
     "php": {
@@ -13,6 +14,7 @@
       "files": {
         "cli": {
           "url": "https://dl.static-php.dev/static-php-cli/bulk/php-{v}-cli-macos-{arch}.tar.gz",
+          "sums": "https://dl.static-php.dev/static-php-cli/bulk/php-{v}-cli-macos-{arch}.tar.gz.sha256",
           "into": "bin",
           "exec": {
             "php": "bin/php"
@@ -20,6 +22,7 @@
         },
         "fpm": {
           "url": "https://dl.static-php.dev/static-php-cli/bulk/php-{v}-fpm-macos-{arch}.tar.gz",
+          "sums": "https://dl.static-php.dev/static-php-cli/bulk/php-{v}-fpm-macos-{arch}.tar.gz.sha256",
           "into": "sbin",
           "exec": {
             "php-fpm": "sbin/php-fpm"
@@ -38,12 +41,6 @@
         },
         "8.2": {
           "eol": "2026-12-31"
-        },
-        "8.1": {
-          "eol": "2025-12-31"
-        },
-        "8.0": {
-          "eol": "2023-11-26"
         }
       },
       "versions": {
@@ -57,12 +54,6 @@
           "sha": {}
         },
         "8.2.32": {
-          "sha": {}
-        },
-        "8.1.34": {
-          "sha": {}
-        },
-        "8.0.30": {
           "sha": {}
         }
       }
@@ -86,15 +77,16 @@
         }
       },
       "lines": {
-        "26": {},
+        "26": {
+          "eol": "2029-04-30"
+        },
         "24": {
-          "lts": true
+          "lts": true,
+          "eol": "2028-04-30"
         },
         "22": {
-          "lts": true
-        },
-        "20": {
-          "lts": true
+          "lts": true,
+          "eol": "2027-04-30"
         }
       },
       "versions": {
@@ -104,58 +96,16 @@
             "dist:x86_64": "98293394c945a24e64e00b4177bf075ec963ea70b34d1d2e24bd4a71716d334f"
           }
         },
-        "25.9.0": {
-          "sha": {
-            "dist:arm64": "e479f3c469d3d9303a44f00a8ea37a3788395d171bb8059c48a4bbbd2e371b59",
-            "dist:x86_64": "7d737b53ce191142bfa1c17cfa5b070d96e84eebf76b8dd06d84981cbdc3f7e3"
-          }
-        },
         "24.18.0": {
           "sha": {
             "dist:arm64": "e1a97e14c99c803e96c7339403282ea05a499c32f8d83defe9ef5ec66f979ed1",
             "dist:x86_64": "dfd0dbd3e721503434df7b7205e719f61b3a3a31b2bcf9729b8b91fea240f080"
           }
         },
-        "23.11.1": {
-          "sha": {
-            "dist:arm64": "255509d2c4fe8e1d6fefb950ad8db285ed75ba543e18744d83dc139f978e404d",
-            "dist:x86_64": "7e384a0cfa8b44ee4833b3823485baad78bf258e54f47020d2d2b4b75e9275d3"
-          }
-        },
         "22.23.1": {
           "sha": {
             "dist:arm64": "ef28d8fab2c0e4314522d4bb1b7173270aa3937e93b92cb7de79c112ac1fa953",
             "dist:x86_64": "b8da981b8a0b1241b70249204916da76c63573ddf5814dbd2d1e41069105cb81"
-          }
-        },
-        "21.7.3": {
-          "sha": {
-            "dist:arm64": "165d3ba3500cfc8708f85d3815aaaa21ce418164c933d5419c30825ccad3a99c",
-            "dist:x86_64": "58d0212e169764c3424d2d5bec73e8a098d34b4e82fca6e1dd54083ea3049c5f"
-          }
-        },
-        "20.20.2": {
-          "sha": {
-            "dist:arm64": "466e05f3477c20dfb723054dfebffe55bc74660ee77f612166fca121dacb65b6",
-            "dist:x86_64": "8be6f5e4bb128c82774f8a0b8d7a1cc1365a7977d9657cece0ca647b3fe04e61"
-          }
-        },
-        "19.9.0": {
-          "sha": {
-            "dist:arm64": "13f7f0e57a2123e55a3172b65e08bc2a51fb52bf366a83d7dda12456ebdc3da0",
-            "dist:x86_64": "4f1a5b72ef0bcb6757e5daaf3fcf2c26fa35dc5d5fdff7692b63775ed51934a4"
-          }
-        },
-        "18.20.8": {
-          "sha": {
-            "dist:arm64": "bae4965d29d29bd32f96364eefbe3bca576a03e917ddbb70b9330d75f2cacd76",
-            "dist:x86_64": "ed2554677188f4afc0d050ecd8bd56effb2572d6518f8da6d40321ede6698509"
-          }
-        },
-        "17.9.1": {
-          "sha": {
-            "dist:arm64": "d6add5bbe10203a76d9ed964a2e5075a45aaf76137dbf3ee772fe6a679a34f36",
-            "dist:x86_64": "ef8ef450425db95a1e91c1dd4bc6d05ca40bbbbdab9a71f59c5a02e13cc039fb"
           }
         }
       }
@@ -217,6 +167,7 @@
       "files": {
         "dist": {
           "url": "https://github.com/theseus-rs/postgresql-binaries/releases/download/{v}/postgresql-{v}-{arch}-apple-darwin.tar.gz",
+          "sums": "https://api.github.com/repos/theseus-rs/postgresql-binaries/releases/tags/{v}",
           "strip": 1,
           "exec": {
             "postgres": "bin/postgres",
@@ -311,6 +262,7 @@
       "files": {
         "dist": {
           "url": "https://github.com/wp-cli/wp-cli/releases/download/v{v}/wp-cli-{v}.phar",
+          "sums": "https://github.com/wp-cli/wp-cli/releases/download/v{v}/wp-cli-{v}.phar.sha512",
           "exec": {
             "wp": "wp-cli.phar"
           }
@@ -330,6 +282,7 @@
       "files": {
         "dist": {
           "url": "https://wordpress.org/wordpress-{v}.zip",
+          "sums": "https://wordpress.org/wordpress-{v}.zip.sha1",
           "strip": 1,
           "docroot": "."
         }
@@ -339,13 +292,15 @@
           "sha": {
             "dist:noarch": ""
           },
-          "minPhp": "7.4"
+          "minPhp": "7.4",
+          "maxPhp": "8.3"
         },
         "6.7.2": {
           "sha": {
             "dist:noarch": ""
           },
-          "minPhp": "7.4"
+          "minPhp": "7.4",
+          "maxPhp": "8.3"
         }
       }
     }
